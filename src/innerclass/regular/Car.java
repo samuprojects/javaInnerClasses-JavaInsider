@@ -19,4 +19,16 @@ public class Car {
             speed += 10;
         }
     }
+
+    public class Door {
+        private boolean isOpen;
+
+        public void open() {
+            isOpen = true;
+        }
+
+        public void close() {
+            isOpen = false;
+        }
+    }
 }

@@ -17,7 +17,7 @@ public class Operation {
 
     private class Sum {
         public  int calculate() {
-            return value1 + value2; // os atribulos da alter class estão disponíveis para a regular inner class
+            return value1 + value2; // os atribulos da outer class estão disponíveis para a regular inner class
         }
     }
 }
