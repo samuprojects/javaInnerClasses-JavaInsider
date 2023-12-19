@@ -1,6 +1,8 @@
 package innerclass.staticnested;
 
+@SuppressWarnings("ALL")
 public class Operation {
+    private static int initialValue = 10;
 
     private final int value1;
     private final int value2;
@@ -20,8 +22,12 @@ public class Operation {
         return counter;
     }
 
+    private static int getInitialValue() {
+        return initialValue;
+    }
+
     public static class Counter { // a static nested é caracterizada por não ter uma relação com a outer class, poderia inclusive estar em um arquivo separado, mas é incluída por conveniência
-        private int value;
+        private int value = getInitialValue(); // pode acessar atributos ou métodos estáticos da outer class
 
         public void increment() {
             value++;
